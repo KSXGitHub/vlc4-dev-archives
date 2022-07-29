@@ -3,3 +3,5 @@
 !/vlc4
 !/vlc4.desktop
 !/*.md
+!/patched-lib
+!/patched-lib/*
