@@ -1,6 +1,11 @@
 #!/bin/bash
 set -o errexit -o pipefail -o nounset
-pkgdir=$(dirname "$0")
-export PATH=${PATH:-}:$pkgdir/usr/bin
-export LD_LIBRARY_PATH=${LD_LIBRARY_PATH:-}:$pkgdir/usr/lib
-exec "$pkgdir/usr/bin/vlc"
+vlc_dir=$(dirname "$0")
+export PATH=${PATH:-}:$vlc_dir/usr/bin
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH:-}:$vlc_dir/usr/lib
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH:-}:$vlc_dir/usr/lib
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH:-}:$vlc_dir/usr/lib/vlc
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH:-}:$vlc_dir/usr/lib/pkgconfig
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH:-}:$vlc_dir/usr/libexec
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH:-}:$vlc_dir/usr/libexec/vlc
+exec "$vlc_dir/usr/bin/vlc"
